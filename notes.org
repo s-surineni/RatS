@@ -1,0 +1,2 @@
+* command to run file python transfer_ratings.py --source criticker --file exports.json
+

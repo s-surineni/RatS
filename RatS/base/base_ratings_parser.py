@@ -4,7 +4,10 @@ import time
 
 from bs4 import BeautifulSoup
 
-from RatS.utils.command_line import print_progress_bar
+from RatS.utils.command_line import (print_progress_bar,
+                                     print_standard_progress_bar)
+
+print_progress_bar = print_standard_progress_bar
 
 
 class RatingsParser:

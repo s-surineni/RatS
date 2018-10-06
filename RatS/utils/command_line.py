@@ -2,6 +2,8 @@ import os
 import sys
 import time
 
+from tqdm import tqdm
+
 from RatS.utils.bash_color import BashColor
 
 
@@ -89,3 +91,9 @@ def error(message):
         sys.stderr.write('\r\nERROR: ' + message + '\r\n')
     sys.stdout.write('\r\n===== ABORTING =====\r\n')
     sys.stdout.flush()
+
+
+def print_standard_progress_bar(iteration, total, start_timestamp,
+                                prefix='', suffix=''):
+    print('called print_standard_progress_bar with ')
+    print(iteration, total, start_timestamp)
