@@ -12,9 +12,10 @@ CSV_HEADER = '"position","const","created","modified","description","Title","Tit
 def load_movies_from_json(folder=EXPORTS_FOLDER, filename='import.json'):
     with open(os.path.join(folder, filename), encoding='UTF-8') as input_file:
         print('*' * 80)
-        print('filename', folder, filename)
+        # print('filename', folder, filename)
         movies_json = json.load(input_file)
-        return [movie for movie in movies_json]
+        # print('movies_json', movies_json)
+        return [movie for movie in movies_json['ratings']]
 
 
 def save_movies_to_json(movies, folder=EXPORTS_FOLDER, filename='export.json'):

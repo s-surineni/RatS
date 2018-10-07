@@ -1,2 +1,23 @@
 * command to run file python transfer_ratings.py --source criticker --file exports.json
 
+* flow
+
+** transfer_ratings.py main
+
+*** execute
+
+*** get_parser_from_arg
+
+*** execute_parsing
+
+*** load_data_from_file
+
+*** parser.site.browser_handler
+
+** base_ratings_parser.py
+
+*** _parse_ratings
+
+** base_ratings_inserter
+
+*** print_progress

@@ -151,6 +151,7 @@ def parse_data_from_source(parser):
 
 def load_data_from_file(filename):
     movies = file_impex.load_movies_from_json(folder=EXPORTS_FOLDER, filename=filename)
+    # print('movies', movies)
     sys.stdout.write('\r\n===== loaded {loaded_movies_count} movies from {folder}/{filename}\r\n'.format(
         loaded_movies_count=len(movies),
         folder=EXPORTS_FOLDER,

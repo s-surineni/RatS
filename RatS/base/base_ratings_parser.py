@@ -42,6 +42,7 @@ class RatingsParser:
         return self.movies
 
     def _parse_ratings(self):
+        print('Inside _parse_ratings')
         movie_ratings_page = BeautifulSoup(self.site.browser.page_source, 'html.parser')
         time.sleep(1)
 
@@ -87,6 +88,7 @@ class RatingsParser:
         raise NotImplementedError("This is not the implementation you are looking for.")
 
     def _parse_movie_listing_page(self, movie_listing_page):
+        print('progress bar entered')
         movies_tiles = self._get_movie_tiles(movie_listing_page)
         for movie_tile in movies_tiles:
             movie = self._parse_movie_tile(movie_tile)
@@ -95,6 +97,7 @@ class RatingsParser:
             self.print_progress(movie)
 
     def print_progress(self, movie):
+        print('progress bar entered')
         if self.args and self.args.verbose and self.args.verbose >= 2:
             sys.stdout.write(
                 '\r===== {site_displayname}: [{movie_index}/{movies_count}] '
