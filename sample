@@ -1,0 +1,11 @@
+from tqdm import trange, tqdm
+from random import random, randint
+from time import sleep
+
+
+
+with tqdm(total=10, postfix=["Batch", dict(value=0)]) as t:
+    for i in range(10):
+        sleep(0.1)
+        t.postfix[1]["value"] = i / 2
+        t.update()
