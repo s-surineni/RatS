@@ -89,7 +89,7 @@ class RatingsInserter:
         #     prefix=self.site.site_displayname
         # )
         if not self.standard_progress_bar:
-            self.standard_progress_bar = tqdm(total=len(movies), postfix=["Movie", movies[counter - 1]]['title'], unit='movie')
+            self.standard_progress_bar = tqdm(total=len(movies), postfix=["Movie", movies[counter - 1]['title']], unit='movie')
         self.standard_progress_bar.update(counter)
         sys.stdout.flush()
         if counter == len(movies):
