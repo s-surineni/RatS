@@ -121,6 +121,8 @@ class RatingsParser:
             self.standard_progress_bar = ProgressBar(
                 max_value=self.movies_count, redirect_stdout=True)
         self.standard_progress_bar.update(len(self.movies))
+        if self.movies_count == len(self.movies):
+            self.standard_progress_bar.finish()
 
     @staticmethod
     def _get_movie_tiles(movie_listing_page):

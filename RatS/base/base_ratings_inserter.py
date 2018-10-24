@@ -83,6 +83,8 @@ class RatingsInserter:
         if not self.standard_progress_bar:
             self.standard_progress_bar = ProgressBar(max_value=len(movies), redirect_stdout=True)
         self.standard_progress_bar.update(counter)
+        if counter == len(movies):
+            self.standard_progress_bar.finish()
 
     def _go_to_movie_details_page(self, movie):
         if self._is_field_in_parsed_data_for_this_site(movie, 'url'):
